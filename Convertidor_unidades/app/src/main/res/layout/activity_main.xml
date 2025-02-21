@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0000FF"
+    android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:marginBottom="32dp"
+            android:text="Convertidor de Unidades"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/buttonTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Temperatura"
+            android:textColor="#FFFFFF"
+            android:background="#1E90FF"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/buttonCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Monedas"
+            android:textColor="#FFFFFF"
+            android:background="#1E90FF"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/buttonLength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E90FF"
+            android:text="Longitudes"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

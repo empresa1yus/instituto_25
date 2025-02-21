@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#2196F3"> <!-- Fondo azul -->
+
+        <TextView
+            android:id="@+id/tvLongitudes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conversión de Longitudes"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/etLongitudesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa el valor"
+            android:inputType="numberDecimal"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            android:padding="10dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/btnMetrosToKilometros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Metros a Kilómetros"
+                android:textColor="#FFFFFF"
+                android:background="#0288D1" /> <!-- Azul brillante -->
+
+            <Button
+                android:id="@+id/btnKilometrosToMetros"
+                android:layout_width="203dp"
+                android:layout_height="wrap_content"
+                android:background="#0288D1"
+                android:text="Kilómetros a Metros"
+                android:textColor="#FFFFFF" />
+        </GridLayout>
+
+    <TextView
+        android:id="@+id/tvResultadoLongitudes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="20dp"
+        android:text="Resultado: "
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+</LinearLayout>
