@@ -1,6 +1,8 @@
 package com.example.convertidor_unidades
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +17,35 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        // Usamos findViewById para obtener las vistas
+        val btnTemperatura: Button = findViewById(R.id.btnTemperatura)
+        val btnMonedas: Button = findViewById(R.id.btnMonedas)
+        val btnLongitudes: Button = findViewById(R.id.btnLongitudes)
+        val mainLayout = findViewById<android.view.View>(R.id.main)
+
+        // Ajuste de padding para los bordes
+        ViewCompat.setOnApplyWindowInsetsListener(mainLayout) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
+        // Redirigir a la actividad correspondiente cuando se haga clic en un botón
+        btnTemperatura.setOnClickListener {
+            val intent = Intent(this, Temperature::class.java) // Cambié de btnTemperatura::class.java a Temperature::class.java
+            startActivity(intent)
+        }
+
+        btnMonedas.setOnClickListener {
+            val intent = Intent(this, monedas::class.java) // Cambié de btnMonedas::class.java a monedas::class.java
+            startActivity(intent)
+        }
+
+        btnLongitudes.setOnClickListener {
+            val intent = Intent(this, longitudes::class.java) // Cambié de btnLongitudes::class.java a longitudes::class.java
+            startActivity(intent)
         }
     }
 }

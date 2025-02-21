@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    android:background="#2196F3"> <!-- Fondo azul -->
+    android:background="#2196F3">
 
         <TextView
             android:id="@+id/tvTemperatura"
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:text="Celsius a Fahrenheit"
                 android:textColor="#FFFFFF"
-                android:background="#0288D1" /> <!-- Azul más brillante -->
+                android:background="#0288D1" />
 
             <Button
                 android:id="@+id/btnFahrenheitToCelsius"
