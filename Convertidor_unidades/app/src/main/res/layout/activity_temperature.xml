@@ -7,50 +7,68 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    android:background="#2196F3">
+    android:background="@color/azulOs">
 
-        <TextView
-            android:id="@+id/tvTemperatura"
-            android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/tvTemperatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conversión de Temperatura"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:paddingBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/etTemperaturaInput"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:hint="Ingresa el valor"
+        android:inputType="numberDecimal"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:paddingBottom="40dp"
+        android:textColor="@color/black" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:paddingTop="20dp">
+
+        <Button
+            android:id="@+id/btnCelsiusToFahrenheit"
+            android:layout_width="295dp"
             android:layout_height="wrap_content"
-            android:text="Conversión de Temperatura"
-            android:textSize="24sp"
-            android:textColor="#FFFFFF"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_margin="20dp"
+            android:background="#0288D1"
             android:layout_gravity="center"
-            android:paddingBottom="20dp"/>
+            android:text="Celsius a Fahrenheit"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/etTemperaturaInput"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnFahrenheitToCelsius"
+            android:layout_width="293dp"
             android:layout_height="wrap_content"
-            android:hint="Ingresa el valor"
-            android:inputType="numberDecimal"
-            android:textColor="#000000"
-            android:background="#FFFFFF"
-            android:padding="10dp" />
+            android:layout_margin="20dp"
+            android:background="#0288D1"
+            android:layout_gravity="center"
+            android:text="Fahrenheit a Celsius"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:orientation="horizontal"
-            android:paddingTop="20dp">
-
-            <Button
-                android:id="@+id/btnCelsiusToFahrenheit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Celsius a Fahrenheit"
-                android:textColor="#FFFFFF"
-                android:background="#0288D1" />
-
-            <Button
-                android:id="@+id/btnFahrenheitToCelsius"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fahrenheit a Celsius"
-                android:textColor="#FFFFFF"
-                android:background="#0288D1" />
         </GridLayout>
 
         <TextView
@@ -58,9 +76,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Resultado: "
-            android:textSize="18sp"
-            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textColor="@color/white"
             android:layout_gravity="center"
+            android:padding="20dp"
             android:paddingTop="20dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/temperatua"/>
 
 </LinearLayout>

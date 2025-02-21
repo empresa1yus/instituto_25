@@ -7,42 +7,53 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    android:background="#2196F3">
+    android:background="@color/azulOs">
 
         <TextView
             android:id="@+id/tvLongitudes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Conversión de Longitudes"
-            android:textSize="24sp"
-            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:paddingTop="40dp"
             android:layout_gravity="center"
-            android:paddingBottom="20dp"/>
+            android:paddingBottom="40dp"/>
 
-        <EditText
-            android:id="@+id/etLongitudesInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ingresa el valor"
-            android:inputType="numberDecimal"
-            android:textColor="#000000"
-            android:background="#FFFFFF"
-            android:padding="10dp" />
+    <EditText
+        android:id="@+id/etLongitudesInput"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:hint="Ingresa el valor"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:textColor="@color/black" />
 
-        <GridLayout
+    <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="2"
-            android:orientation="horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="50dp"
+            android:layout_gravity="center"
             android:paddingTop="20dp">
 
             <Button
                 android:id="@+id/btnMetrosToKilometros"
-                android:layout_width="wrap_content"
+                android:layout_width="203dp"
                 android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="#0288D1"
                 android:text="Metros a Kilómetros"
-                android:textColor="#FFFFFF"
-                android:background="#0288D1" />
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btnKilometrosToMetros"
@@ -50,6 +61,10 @@
                 android:layout_height="wrap_content"
                 android:background="#0288D1"
                 android:text="Kilómetros a Metros"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_margin="20dp"
                 android:textColor="#FFFFFF" />
         </GridLayout>
 
@@ -58,9 +73,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingTop="20dp"
+        android:padding="20dp"
+        android:textAlignment="center"
         android:text="Resultado: "
         android:textColor="#FFFFFF"
-        android:textSize="18sp" />
+        android:textSize="30sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/medida"/>
 
 </LinearLayout>

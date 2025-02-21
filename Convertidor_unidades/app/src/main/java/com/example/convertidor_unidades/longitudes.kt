@@ -22,21 +22,18 @@ class longitudes : AppCompatActivity() {
             insets
         }
 
-        // Usamos findViewById para obtener las vistas
         val btnMetrosToKilometros: Button = findViewById(R.id.btnMetrosToKilometros)
         val btnKilometrosToMetros: Button = findViewById(R.id.btnKilometrosToMetros)
         val etLongitudesInput: EditText = findViewById(R.id.etLongitudesInput)
         val tvResultadoLongitudes: TextView = findViewById(R.id.tvResultadoLongitudes)
         val mainLayout: View = findViewById(R.id.main)
 
-        // Ajuste de padding para los bordes
         ViewCompat.setOnApplyWindowInsetsListener(mainLayout) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Convertir Metros a Kilómetros
         btnMetrosToKilometros.setOnClickListener {
             val input = etLongitudesInput.text.toString()
             if (input.isNotEmpty()) {
@@ -48,7 +45,6 @@ class longitudes : AppCompatActivity() {
             }
         }
 
-        // Convertir Kilómetros a Metros
         btnKilometrosToMetros.setOnClickListener {
             val input = etLongitudesInput.text.toString()
             if (input.isNotEmpty()) {

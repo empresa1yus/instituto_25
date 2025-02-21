@@ -20,39 +20,37 @@ class Temperature : AppCompatActivity() {
             insets
         }
 
-        // Usamos findViewById para obtener las vistas
         val btnCelsiusToFahrenheit: Button = findViewById(R.id.btnCelsiusToFahrenheit)
         val btnFahrenheitToCelsius: Button = findViewById(R.id.btnFahrenheitToCelsius)
         val etTemperaturaInput: EditText = findViewById(R.id.etTemperaturaInput)
         val tvResultadoTemperatura: TextView = findViewById(R.id.tvResultadoTemperatura)
         val mainLayout = findViewById<android.view.View>(R.id.main)
 
-        // Ajuste de padding para los bordes
         ViewCompat.setOnApplyWindowInsetsListener(mainLayout) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Convertir Celsius a Fahrenheit
         btnCelsiusToFahrenheit.setOnClickListener {
             val input = etTemperaturaInput.text.toString()
             if (input.isNotEmpty()) {
                 val celsius = input.toDouble()
                 val fahrenheit = (celsius * 9/5) + 32
-                tvResultadoTemperatura.text = "Resultado: $fahrenheit °F"
+                val redondeado = String.format("%.2f", fahrenheit).toDouble()
+                tvResultadoTemperatura.text = "Resultado: $redondeado °F"
             } else {
                 Toast.makeText(this, "Por favor ingresa un valor", Toast.LENGTH_SHORT).show()
             }
         }
 
-        // Convertir Fahrenheit a Celsius
         btnFahrenheitToCelsius.setOnClickListener {
             val input = etTemperaturaInput.text.toString()
             if (input.isNotEmpty()) {
                 val fahrenheit = input.toDouble()
                 val celsius = (fahrenheit - 32) * 5/9
-                tvResultadoTemperatura.text = "Resultado: $celsius °C"
+                val redondeado = String.format("%.2f", fahrenheit).toDouble()
+                tvResultadoTemperatura.text = "Resultado: $redondeado °C"
             } else {
                 Toast.makeText(this, "Por favor ingresa un valor", Toast.LENGTH_SHORT).show()
             }

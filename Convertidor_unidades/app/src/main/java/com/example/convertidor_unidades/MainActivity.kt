@@ -32,19 +32,18 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Redirigir a la actividad correspondiente cuando se haga clic en un botón
         btnTemperatura.setOnClickListener {
-            val intent = Intent(this, Temperature::class.java) // Cambié de btnTemperatura::class.java a Temperature::class.java
+            val intent = Intent(this, Temperature::class.java)
             startActivity(intent)
         }
 
         btnMonedas.setOnClickListener {
-            val intent = Intent(this, monedas::class.java) // Cambié de btnMonedas::class.java a monedas::class.java
+            val intent = Intent(this, monedas::class.java)
             startActivity(intent)
         }
 
         btnLongitudes.setOnClickListener {
-            val intent = Intent(this, longitudes::class.java) // Cambié de btnLongitudes::class.java a longitudes::class.java
+            val intent = Intent(this, longitudes::class.java)
             startActivity(intent)
         }
     }
